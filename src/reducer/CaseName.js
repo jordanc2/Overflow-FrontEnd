@@ -1,9 +1,28 @@
-const initialState = {
+const initialState = [{
     name: 'Jenna Moroney',
     street_address: '123 Street',
     city: 'Omaha',
     state: 'NE'
+},
+{
+    name: 'Tina Fey',
+    street_address: '123 Street',
+    city: 'Omaha',
+    state: 'NE'
+},
+{
+    name: 'Tracy Morgan',
+    street_address: '123 Street',
+    city: 'Omaha',
+    state: 'NE'
+},
+{
+    name: 'Pete',
+    street_address: '123 Street',
+    city: 'Omaha',
+    state: 'NE'
 }
+]
 
 const caseName = (state=initialState, action) => {
     switch(action.type){
