@@ -1,19 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux'
 
 
-const Agency = ({name, street_address, city, state}) => {
+const Agency = ({agencies}) => {
     return (
     <div>
-        <h2>Name: UNMC {name}</h2>
-        <p> Address: 123 test{street_address}</p>
-        <p> City: Omaha{city}</p>
-        <p> State: NE {state}</p>
+        <p>Agencies associated with this case: {agencies}</p>
         <Link to='/'>
-        Cases
+        Back To Case
             </Link>
     </div>
     );
 }
 
-export default Agency;
+const mapStateToProps = (state) => ({
+    agencies: state.agencyName.data,
+})
+export default connect(mapStateToProps)(Agency);
