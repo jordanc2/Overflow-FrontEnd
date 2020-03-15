@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import Cases from '../src/components/Cases';
-import Agency from './components/Agencies';
-import User from './components/Users'
+import Cases from './components/Cards/CasesCard';
+import Agency from './components/Cards/AgenciesCard';
+import User from './components/Cards/UsersCard'
 import './App.css';
 
 function App(props) {
@@ -13,7 +13,7 @@ function App(props) {
         <p>Welcome</p>
         <User/>
         </div>
-      <Route exact path ='/' component={Cases}/>
+      <Route exact path ='/' component={Cases} />
       <Route exact path ='/Agency' component={Agency}/>
       </div>
 
