@@ -1,5 +1,5 @@
 const initialState = {
-    data: [ 'Hospital', 'Clinic', 'Doctor']
+    data:[]
 };
 
 const agencyNames = (state=initialState, action) => {

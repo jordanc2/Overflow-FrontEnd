@@ -1,5 +1,5 @@
 const initialState = {
-    name: 'Jane Does',
+    name: 'Jenna Moroney',
     street_address: '123 Street',
     city: 'Omaha',
     state: 'NE'
