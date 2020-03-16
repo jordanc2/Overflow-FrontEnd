@@ -1,20 +1,19 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import Cases from './components/Cards/CasesCard';
-import Agency from './components/Cards/AgenciesCard';
-import User from './components/Cards/UsersCard'
+import CasesList from './components/Lists/CasesList';
+import AgencyList from './components/Lists/AgenciesList';
+import UsersList from './components/Lists/UsersList'
 import './App.css';
 
-function App(props) {
+function App() {
   return (
-      <div className="App">
-        <h3>Case Overview</h3>
-        <div>
-        <p>Welcome</p>
-        <User/>
+      <div>
+        <h2>Case Overview</h2>
+        <UsersList/>
+        <div className="case-list">
+      <Route exact path ='/' component={CasesList} />
+      <Route exact path ='/Agency' component={AgencyList}/>
         </div>
-      <Route exact path ='/' component={Cases} />
-      <Route exact path ='/Agency' component={Agency}/>
       </div>
 
   );
