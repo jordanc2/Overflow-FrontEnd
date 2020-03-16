@@ -1,4 +1,5 @@
-const initialState = [{
+const initialState = [
+{
     name: 'Jenna Moroney',
     street_address: '123 Street',
     city: 'Omaha',

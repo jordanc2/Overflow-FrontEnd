@@ -1,6 +1,6 @@
-const initialState = {
-    username: 'Jane Doe',
-}
+const initialState = [{
+    username: 'Hermoine Granger',
+}]
 
 const user = (state=initialState, action) => {
     switch(action.type){
