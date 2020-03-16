@@ -1,26 +1,20 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 
-
-const Cases = ({name, street_address, city, state}) => {
+const Cases = (props) => {
     return (
-    <div className='case-card'>
-        <h5>Name: {name}</h5>
-        <p>Address: {street_address}</p>
-        <p>City: {city}</p>
-        <p>State: {state}</p>
-        <Link to='/Agency'>
-        Agencies
+    <div className='case-layout'>
+        <div className='case-card'>
+            <p><strong>Name: </strong>{props.name} </p>
+            <p><strong>Address: </strong>{props.street_address} </p>
+            <p><strong>City: </strong>{props.city} </p>
+            <p><strong>State: </strong>{props.state} </p>
+        </div>
+            <Link style={{ textDecoration: 'none' }} to='/Agency'>
+                Go To Agencies
             </Link>
     </div>
-);
-}
+)}
 
-const mapStateToProps = (state) => ({
-    name: state.caseName.name,
-    street_address: state.caseName.street_address,
-    city: state.caseName.city,
-    state: state.caseName.state
-})
-export default connect(mapStateToProps)(Cases);
+
+export default Cases;

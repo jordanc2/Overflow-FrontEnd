@@ -1,20 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { connect } from 'react-redux'
 
 
-const Agency = ({agencies}) => {
+const Agency = (props) => {
     return (
     <div>
-        <p>Agencies associated with this case: {agencies}</p>
-        <Link to='/'>
+        <p>Agencies associated with this case:</p>
+        <h4>Name: {props.name}</h4>
+        <p>Address: {props.address}</p>
+        <p>City: {props.city}</p>
+        <p>State: {props.state}</p>
+        <Link style={{ textDecoration: 'none' }}  to='/'>
         Back To Case
             </Link>
     </div>
     );
 }
 
-const mapStateToProps = (state) => ({
-    agencies: state.agencyName.data,
-})
-export default connect(mapStateToProps)(Agency);
+export default Agency;

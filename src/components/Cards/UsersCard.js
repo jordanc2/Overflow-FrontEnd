@@ -1,18 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux'
 
 
 
-const Users = ({username}) => {
+
+const Users = (props) => {
     return (
-    <div>
-        <h4>{username}</h4>
+    <div className='user-card'>
+        <p>Welcome {props.username},</p>
     </div>
 );
 }
 
-const mapStateToProps = (state) => ({
-    username: state.user.username
-})
-
-export default connect(mapStateToProps)(Users);
+export default Users;
