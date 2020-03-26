@@ -1,36 +1,22 @@
-const initialState = [
-{
-    name: 'Jenna Moroney',
-    street_address: '123 Street',
-    city: 'Omaha',
-    state: 'NE'
-},
-{
-    name: 'Tina Fey',
-    street_address: '123 Street',
-    city: 'Omaha',
-    state: 'NE'
-},
-{
-    name: 'Tracy Morgan',
-    street_address: '123 Street',
-    city: 'Omaha',
-    state: 'NE'
-},
-{
-    name: 'Pete',
-    street_address: '123 Street',
-    city: 'Omaha',
-    state: 'NE'
-}
-]
+import { FETCH_SUCCESS } from "../actions/index";
 
-const caseName = (state=initialState, action) => {
-    switch(action.type){
-        case '':
-            return{}
+const initialState = {
+cases: [],
+error: null,
+isFetching: false
+};
+
+function caseName (state = initialState, action) {
+switch (action.type) {
+    case FETCH_SUCCESS:
+    return {
+        ...state,
+        cases: action.payload,
+        isFetching: true,
+        error: null
+    };
     default:
-        return state
+    return state;
     }
 }
 
