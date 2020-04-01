@@ -10,7 +10,7 @@ import '../src/styles/dashboard.css'
 function App() {
   return (
       <div className="App">
-        <div>
+        <div className="users">
           <UsersList/>
         </div>
         <div>    
@@ -19,7 +19,7 @@ function App() {
         <div>
           <Route exact path ='/Agency' component={AgencyList}/>
         </div>
-        <div>
+        <div >
           <Route exact path ='/AddCaseCard' component={AddCaseCard} />
         </div>
       </div>

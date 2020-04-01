@@ -6,7 +6,7 @@ import '../../styles/dashboard.css';
 
 const UsersList = (props) => {
     return(
-        <div className="users">
+        <div>
             {props.username.map((item, index) =>
                 <Users key={index} username={item.username}/>
             )}

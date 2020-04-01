@@ -7,8 +7,10 @@ import '../../styles/dashboard.css';
 
 const CasesList = (props) => {
 
+
     useEffect (()=>{
         props.fetchCase();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (props.isFetching){
