@@ -15,6 +15,7 @@ const CaseForm = props => {
     const [state, setState] = useState('');
 
     const submitHandler = e => {
+        e.preventDefault();
         let newCase = {
             full_name: full_name,
             phone: phone,
@@ -59,7 +60,7 @@ const CaseForm = props => {
     }
 
     return (
-        <form  className="addsCase" onChange ={submitHandler}>
+        <form  className="addsCase" onSubmit ={submitHandler}>
             <p>Enter New Case Information Below</p>  
             <input onChange ={nameChangeHandler} type="text" value={full_name} placeholder="full name"/>
             <input onChange ={phoneChangeHandler}  type="text" value={phone} placeholder="phone"/>
