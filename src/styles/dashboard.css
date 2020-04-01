@@ -1,5 +1,4 @@
 .users {
-    height: 100vh;
     background-color: rgba(47, 79, 168, 0.897);
     color: white;
     padding: 30px;
@@ -13,6 +12,7 @@
     align-items: center;
     text-align: left;
     line-height: 50px;
+    height: 100vh;
 }
 
 .user-text {
