@@ -1,5 +1,5 @@
 const initialState = [{
-    username: 'Hermoine Granger',
+    username: 'Jane Doe',
 }]
 
 const user = (state=initialState, action) => {

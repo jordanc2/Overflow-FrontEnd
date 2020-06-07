@@ -5,15 +5,15 @@ import { fetchCase } from '../../actions/index';
 import AddCase from '../Adds/AddCase';
 import '../../styles/dashboard.css';
 
-const CasesList = (props) => {
+const CasesList = ({cases, isFetching, error}) => {
 
 
     useEffect (()=>{
-        props.fetchCase();
+        fetchCase();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    if (props.isFetching){
+    if (isFetching){
         return <h2>Loading Cases...</h2>
     }
 
@@ -21,9 +21,8 @@ const CasesList = (props) => {
         <div>
             <h1>Case Overview</h1>
             <AddCase/>
-
-            {props.error && <p>{props.error}</p>}
-            {props.cases.map(item =>
+            {error && <p>{error}</p>}
+            {cases.map(item =>
                 <Case 
                 key={item.id} 
                 case_id= {item.case_id} 
