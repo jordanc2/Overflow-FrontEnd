@@ -1,26 +1,26 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import CasesList from './components/Lists/CasesList';
-import AgencyList from './components/Lists/AgenciesList';
-import UsersList from './components/Lists/UsersList';
-import AddCaseCard from './components/Cards/AddCaseCard';
+import InventoryList from './components/Lists/InventoryList';
+import ProductsList from './components/Lists/ProductsList';
+import Client from './components/Lists/Client';
+import AddProductCard from './components/Cards/AddProductCard';
 import '../src/styles/app.css';
-import '../src/styles/dashboard.css'
+import '../src/styles/dashboard.css';
 
 function App() {
   return (
       <div className="App">
         <div className="users">
-          <UsersList/>
+          <Client/>
         </div>
         <div>    
-          <Route exact path ='/' component={CasesList} />
+          <Route exact path ='/InventoryList' component={InventoryList} />
         </div>
         <div>
-          <Route exact path ='/Agency' component={AgencyList}/>
+          <Route exact path ='/ProductsList' component={ProductsList}/>
         </div>
         <div >
-          <Route exact path ='/AddCaseCard' component={AddCaseCard} />
+          <Route exact path ='/AddProductCard' component={AddProductCard} />
         </div>
       </div>
 

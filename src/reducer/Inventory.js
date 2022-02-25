@@ -1,17 +1,17 @@
 import { FETCH_SUCCESS } from "../actions/index";
 
 const initialState = {
-cases: [],
-error: null,
-isFetching: false
-};
+    inventories: [],
+    error: null,
+    isFetching: false
+}
 
-function caseName (state = initialState, action) {
+function inventory (state = initialState, action) {
 switch (action.type) {
     case FETCH_SUCCESS:
     return {
         ...state,
-        cases: action.payload,
+        inventories: action.payload,
         isFetching: true,
         error: null
     };
@@ -20,4 +20,4 @@ switch (action.type) {
     }
 }
 
-export default caseName;
+export default inventory;

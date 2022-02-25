@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import caseName from './CaseName';
-import agencyName from './Agencies';
-import user from './User';
+import products from './Products';
+import inventory from './Inventory';
+import client from './Client';
 
 const rootReducer = combineReducers({
-    caseName,
-    agencyName,
-    user
+    products,
+    inventory,
+    client
 })
 
 export default rootReducer;
