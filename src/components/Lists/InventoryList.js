@@ -2,6 +2,7 @@ import React, { useEffect, useState }from 'react';
 import axios from 'axios';
 import InventoryCard from '../Cards/InventoryCard'
 import '../../styles/dashboard.css';
+import Client from './Client';
 
 const InventoryListClient = props => {
     const [products, setProducts] = useState([])
@@ -23,6 +24,7 @@ const InventoryListClient = props => {
 
     return (
          <div>
+             <Client/>
             <h1>Inventory</h1>
             {products.map(item =>
                 <InventoryCard 
