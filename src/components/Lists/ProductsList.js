@@ -5,6 +5,7 @@ import '../../styles/dashboard.css';
 
 const ProductsList = props => {
     const [products, setProducts] = useState([])
+    
 
     useEffect(() => {
         const getProducts = () => {

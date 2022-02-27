@@ -16,8 +16,8 @@ function App() {
         </div>
           <Route exact path ='/' component={LoginForm}/>
           <Route exact path ='/register' component={RegisterForm}/>
-          <PrivateRoute component={InventoryList} exact path = '/InventoryList'/>
-          <PrivateRoute component={ProductsList} exact path = '/ProductsList'/>
+          <Route component={InventoryList} exact path = '/InventoryList'/>
+          <Route component={ProductsList} exact path = '/ProductsList'/>
           <PrivateRoute component={AddProductCard} exact path = '/AddProductCard' />
         </div>
   );
