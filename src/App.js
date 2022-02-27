@@ -5,7 +5,7 @@ import ProductsList from './components/Lists/ProductsList';
 import AddProductCard from './components/Cards/AddProductCard';
 import '../src/styles/app.css';
 import '../src/styles/dashboard.css';
-import LoginForm from './components/';
+import LoginForm from './components/Authentication/Login';
 import RegisterForm from './components/Authentication/Register';
 import PrivateRoute from './components/Authentication/PrivateRoute';
 
