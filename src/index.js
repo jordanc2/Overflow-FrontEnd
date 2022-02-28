@@ -6,6 +6,7 @@ import '../src/styles/global.css';
 import App from './App';
 import store from './store'
 import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render( 
     <Provider store={store}>

@@ -16,7 +16,7 @@ const ClientCard = (props) => {
         <Link style={{ textDecoration: 'none', color: 'white' }} to='/InventoryList'>
         <p>Inventory</p>
          </Link>
-         <Link style={{ textDecoration: 'none', color: 'white' }} to='/AddProductCard'>
+         <Link style={{ textDecoration: 'none', color: 'white' }} to='/CreateProduct'>
         <p>Create Product</p>
          </Link>
           <Link style={{ textDecoration: 'none', color: 'white' }} to='/settings'>
