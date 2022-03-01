@@ -1,40 +1,56 @@
-import React, { useEffect, useState }from 'react';
 import axios from 'axios';
-import InventoryCard from '../Cards/InventoryCard'
-import '../../styles/dashboard.css';
+import React, { useEffect, useState } from 'react'
+import { Button, Card, Divider } from 'semantic-ui-react'
+import FixedPrivateMenu from '../Pages/FixedPrivateMenu';
+import SidebarVisible from '../Pages/SideBar';
 
-const InventoryListClient = props => {
-    const [products, setProducts] = useState([])
 
 
-    useEffect(() => {
-        const getInventory = () => {
+
+export default InventoryListClient => ({id}) => {
+
+    const [APIData, setAPIData] = useState([]);
+ 
+    useEffect((id) => {
             axios
-            .get(`https://3m9n4hsuhb.execute-api.us-east-2.amazonaws.com/test/inventories/EpCld`)
+            .get(`https://3m9n4hsuhb.execute-api.us-east-2.amazonaws.com/test/clients/${id}/inventories`)
             .then(response => {
-                setProducts(response.data.products);
+                setAPIData(response.data.products);
             })
             .catch(error => {
                 console.log(error);
             });
-        }
-        getInventory();
     }, [])
 
+    // const getData = () => {
+    //     axios.get(`https://3m9n4hsuhb.execute-api.us-east-2.amazonaws.com/test/products`)
+    //         .then((getData) => {
+    //             setAPIData(getData.data.products);
+    //         })
+    // }
+
     return (
-         <div>
-            <h1>Inventory</h1>
-            {products.map(item =>
-                <InventoryCard 
-                key={item.clientId} 
-                name= {item.name} 
-                quantity={item.quantity} 
-                price= {item.price} 
-                />
-            )}
-        </div>
+      <>
+      <FixedPrivateMenu></FixedPrivateMenu>
+      <SidebarVisible/>
+        <Divider />
+        <Card.Group itemsPerRow={4} stackable>
+          {APIData.map((data) => {
+              return (
+                  <Card>
+                <Card.Content>
+                   <Card.name>Product: {data.name}</Card.name>
+                  <Card.Meta>Quantity: {data.quantity}</Card.Meta>
+                  <Card.Description>Price: ${data.price}</Card.Description>
+                  </Card.Content>
+                  <Card.Content extra>
+                  <Button>Remove</Button>
+                </Card.Content>
+                 </Card>
+              )
+          })}
+        </Card.Group>
+      </>
     )
 }
 
-
-export default InventoryListClient;

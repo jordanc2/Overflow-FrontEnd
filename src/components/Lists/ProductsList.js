@@ -1,7 +1,10 @@
 import React, { useEffect, useState }from 'react';
 import axios from 'axios';
-import { Table, Button } from 'semantic-ui-react';
+import { Table, Button,Grid, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import FixedPrivateMenu from '../Pages/FixedPrivateMenu';
+import SidebarVisible  from '../Pages/SideBar';
+import CreateProduct from '../Cards/CreateProduct';
 
 
 const ProductsList = () => {
@@ -42,10 +45,34 @@ const ProductsList = () => {
         }
         
         return (
-        
-            <div>
-                <Table singleLine>
-                    <Table.Header>
+        <>
+        <FixedPrivateMenu/>
+                <Grid>
+                    <Grid.Row>
+                        <Grid.Column style={{ width: '18vw',height: '100vh', display: 'flex', justifyContent: 'start', margin:'0', padding: '0'}}>
+            <SidebarVisible/>
+            </Grid.Column>
+            <Grid.Column width={8}>
+                <h2 style={{ marginTop:'3em', padding: '0'}}>Product Inventory</h2>    
+                <Table singleLine style={{boxShadow: '5px 5px 5px grey'}}>
+                    <Table.Header fullWidth>
+                    <Table.Row > 
+                    <Table.HeaderCell  colSpan='5' >
+                        <Link to='/CreateProduct'>
+                        <Button
+                         floated='right'
+                         icon
+                         labelPosition='left'
+                         primary
+                         size='small'
+                         style={{boxShadow: '5px 5px 5px grey'}}
+                        >
+                            <Icon name='add' />
+                            Product</Button>
+                            </Link>
+                        </Table.HeaderCell>
+                         </Table.Row>
+
                         <Table.Row>
                             <Table.HeaderCell>Product Name</Table.HeaderCell>
                             <Table.HeaderCell>Quantity</Table.HeaderCell>
@@ -64,18 +91,22 @@ const ProductsList = () => {
                                     <Table.Cell>${data.price}</Table.Cell>
                                     <Link to='/UpdateProduct'>
                                         <Table.Cell> 
-                                            <Button onClick={() => setData(data)}>Update</Button>
+                                            <Button onClick={() => setData(data)} style={{boxShadow: '5px 5px 5px grey'}}>Update</Button>
                                         </Table.Cell>
                                     </Link>
                                     <Table.Cell>
-                                        <Button onClick={() => onDelete(data.productId)}>Delete</Button>
+                                        <Button onClick={() => onDelete(data.productId)} style={{boxShadow: '5px 5px 5px grey'}}>Delete</Button>
                                     </Table.Cell>
                                 </Table.Row>
                             )
                         })}
                     </Table.Body>
                 </Table>
-            </div>
+                </Grid.Column>
+                </Grid.Row>
+                </Grid>
+           
+            </>
             
         )
 }

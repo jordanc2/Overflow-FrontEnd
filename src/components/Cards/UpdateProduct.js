@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Form } from 'semantic-ui-react'
+import { Button, Container, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useHistory } from 'react-router';
+import Sidebar from '../Pages/SideBar';
+import FixedPrivateMenu from '../Pages/FixedPrivateMenu';
 
 export default function UpdateProduct() {
     let history = useHistory();
@@ -30,8 +32,11 @@ export default function UpdateProduct() {
 
     return (
         <div>
+            <FixedPrivateMenu></FixedPrivateMenu>
+            <Container>
+                <Sidebar/>
             <Form>
-                <Form.Field>
+                <Form.Field key={id}>
                     <label>Product Name</label>
                     <input placeholder='Product Name' value={name} onChange={(e) => setName(e.target.value)}/>
                 </Form.Field>
@@ -46,6 +51,7 @@ export default function UpdateProduct() {
                 
                 <Button type='submit' onClick={updateAPIData}>Update</Button>
             </Form>
+            </Container>
         </div>
     )
 }

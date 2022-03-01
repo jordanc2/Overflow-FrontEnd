@@ -1254,6 +1254,11 @@
     "global-agent" "^3.0.0"
     "global-tunnel-ng" "^2.7.1"
 
+"@faker-js/faker@^6.0.0-alpha.7":
+  "integrity" "sha512-T2nYE8+EfzfkRMLMSm7UvgC7fZ2KkKEyCMeyPVS0q2cuvENbt1SjWyu0bOJ0JqBbTs1g+gYMWMFMXspWlzNVmQ=="
+  "resolved" "https://registry.npmjs.org/@faker-js/faker/-/faker-6.0.0-alpha.7.tgz"
+  "version" "6.0.0-alpha.7"
+
 "@fluentui/date-time-utilities@^8.3.0":
   "integrity" "sha512-shSWwarh+ueDF22hIRL1T9bGA4epsP8QAIfYhpoK5ySr0Zg5RjqdNMM5IXzlTiXqE/LGe16CVrvyW2ksqfvQPg=="
   "resolved" "https://registry.npmjs.org/@fluentui/date-time-utilities/-/date-time-utilities-8.3.0.tgz"
@@ -5259,6 +5264,11 @@
   "integrity" "sha1-lpGEQOMEGnpBT4xS48V06zw+HgU="
   "resolved" "https://registry.npmjs.org/extsprintf/-/extsprintf-1.3.0.tgz"
   "version" "1.3.0"
+
+"faker@^6.6.6":
+  "integrity" "sha512-9tCqYEDHI5RYFQigXFwF1hnCwcWCOJl/hmll0lr5D2Ljjb0o4wphb69wikeJDz5qCEzXCoPvG6ss5SDP6IfOdg=="
+  "resolved" "https://registry.npmjs.org/faker/-/faker-6.6.6.tgz"
+  "version" "6.6.6"
 
 "fast-deep-equal@^3.1.1":
   "integrity" "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="

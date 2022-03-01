@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@artsy/fresnel": "^3.4.0",
+    "@faker-js/faker": "^6.0.0-alpha.7",
     "@fluentui/react": "^8.56.1",
     "@fluentui/react-component-ref": "^0.60.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -11,8 +12,10 @@
     "@testing-library/user-event": "^7.1.2",
     "acorn": "^7.1.1",
     "axios": "^0.19.2",
+    "faker": "^6.6.6",
     "kind-of": "^6.0.3",
     "less": "^3.11.1",
+    "lodash": "^4.17.21",
     "minimist": "^1.2.5",
     "react": "^16.13.0",
     "react-devtools": "^4.5.0",
