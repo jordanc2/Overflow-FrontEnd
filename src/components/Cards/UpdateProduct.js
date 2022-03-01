@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Container, Form } from 'semantic-ui-react'
+import { Button, Grid, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useHistory } from 'react-router';
 import Sidebar from '../Pages/SideBar';
@@ -32,26 +32,34 @@ export default function UpdateProduct() {
 
     return (
         <div>
-            <FixedPrivateMenu></FixedPrivateMenu>
-            <Container>
+            <FixedPrivateMenu/>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column style={{ width: '18vw',height: '100vh', display: 'flex', justifyContent: 'start', margin:'0', padding: '0'}}>
                 <Sidebar/>
+                </Grid.Column>
+                <Grid.Column width={5}>
+                    <h2 style={{ marginTop:'3em', padding: '0'}}>Update Product</h2>
             <Form>
+
                 <Form.Field key={id}>
                     <label>Product Name</label>
-                    <input placeholder='Product Name' value={name} onChange={(e) => setName(e.target.value)}/>
+                    <input placeholder='Product Name' value={name} onChange={(e) => setName(e.target.value)} style={{boxShadow: '5px 5px 5px grey'}}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Quantity</label>
-                    <input placeholder='Quantity' value={quantity} onChange={(e) => setQuantity(e.target.value)}/>
+                    <input placeholder='Quantity' value={quantity} onChange={(e) => setQuantity(e.target.value)} style={{boxShadow: '5px 5px 5px grey'}}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Price</label>
-                    <input placeholder='Price' value={price} onChange={(e) => setPrice(e.target.value)}/>
+                    <input placeholder='Price' value={price} onChange={(e) => setPrice(e.target.value)} style={{boxShadow: '5px 5px 5px grey'}}/>
                 </Form.Field>
                 
-                <Button type='submit' onClick={updateAPIData}>Update</Button>
+                <Button type='submit' onClick={updateAPIData} style={{boxShadow: '5px 5px 5px grey'}}>Update</Button>
             </Form>
-            </Container>
+            </Grid.Column>
+            </Grid.Row>
+            </Grid>
         </div>
     )
 }
