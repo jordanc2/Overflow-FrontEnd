@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-// import { AccountContext } from './Accounts';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Pool from '../Authentication/UserPool';
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
@@ -8,6 +8,7 @@ import FixedMenuLayout from './FixedMenu'
 
 
 const LoginForm = () => {
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -75,10 +76,11 @@ const LoginForm = () => {
             onChange={event => setPassword(event.target.value)}
 
           />
-
+  <Link to='/ProductsList'>
           <Button color='blue' fluid size='large'>
             Login
           </Button>
+          </Link>
         </Segment>
       </Form>
       <Message>

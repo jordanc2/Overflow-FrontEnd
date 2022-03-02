@@ -8,7 +8,7 @@ const SidebarVisible = () => (
       as={Menu} animation='overlay' icon='labeled' inverted vertical visible color='blue'
       style={{display: 'flex', alignItems:'center', width: '13vw', paddingLeft: '1em'}}
     >
-      <Link to='/'>
+      <Link to='/ProductsList'>
       <Menu.Item as='a'
       >
         <Icon name='home' />

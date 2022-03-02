@@ -18,7 +18,6 @@ const FixedMenuLayout = () => (
     <Menu color = 'blue' fixed='top' inverted style={{
       fontWeight: 'normal',
       fontSize: '1.3rem',
-      marginBottom: 10,
       padding: '0',
       height:'6vh'
     }}>
