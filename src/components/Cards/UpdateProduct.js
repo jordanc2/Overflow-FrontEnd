@@ -13,19 +13,18 @@ export default function UpdateProduct() {
     const [price, setPrice] = useState('');
 
     useEffect(() => {
-        setID(localStorage.getItem('id'))
+        setID(localStorage.getItem('ID'));
         setName(localStorage.getItem('name'));
         setQuantity(localStorage.getItem('quantity'));
         setPrice(localStorage.getItem('price'));
     }, []);
 
-    const updateAPIData = (product) => {
-        axios.put(`https://cors-anywhere.herokuapp.com/:https://3m9n4hsuhb.execute-api.us-east-2.amazonaws.com/test/products/${product}`, {
+    const updateAPIData = () => {
+        axios.put(`https://3m9n4hsuhb.execute-api.us-east-2.amazonaws.com/test/products/${id}`, {
             name,
             quantity,
             price
         }).then(() => {
-            console.log('updated')
             history.push('/ProductsList')
         })
     }

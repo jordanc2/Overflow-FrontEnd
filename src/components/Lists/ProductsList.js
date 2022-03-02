@@ -23,7 +23,7 @@ const ProductsList = () => {
 
         const setData = (data) => {
             let { productId, name, quantity, price } = data;
-            localStorage.setItem('id', productId);
+            localStorage.setItem('ID', productId);
             localStorage.setItem('name', name);
             localStorage.setItem('quantity', quantity);
             localStorage.setItem('price', price);
