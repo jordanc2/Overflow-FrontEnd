@@ -3,7 +3,7 @@ import { Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 
 const SidebarVisible = () => (
-  <Sidebar.Pushable as={Segment} style={{transform: 'none', marginTop: '3.4em', width:'13vw'}}>
+  <Sidebar.Pushable as={Segment} style={{transform: 'none', marginTop: '3.4em', width:'13vw', height:'100vh'}}>
     <Sidebar
       as={Menu} animation='overlay' icon='labeled' inverted vertical visible color='blue'
       style={{display: 'flex', alignItems:'center', width: '13vw', paddingLeft: '1em'}}
